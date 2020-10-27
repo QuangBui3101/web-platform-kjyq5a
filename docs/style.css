@@ -276,7 +276,7 @@ pre {
   border-width: 0.01em 0.01em 0.01em 0.01em;
   padding: 0.2em 0.6em;
   height: auto;
-  opacity: 100%;
+  opacity: 0%;
   transition: opacity 0.3s linear;
   top: 0;
   grid-column: 1;
