@@ -210,6 +210,7 @@ body {
   width: 70%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1200px) {
@@ -278,14 +279,21 @@ pre {
   padding: 0.2em 0.6em;
   height: auto;
   opacity: 0%;
-  transition: opacity 0.1s linear;
+  transition: opacity 0.3s linear;
   top: 0;
   grid-column: 1;
   grid-row: 1;
+  visibility: hidden;
+}
+
+.code:not(.active) {
+  visibility: hidden;
+  opacity: 0%;
 }
 
 .code.active {
   opacity: 100%;
+  visibility: visible;
 }
 
 .secContent.example {
@@ -319,7 +327,7 @@ pre {
   margin-bottom: -3px;
 }
 
-a.activeTag {
+.tag > .activeTag {
   background-color: #ffffff;
   border: solid 0.005em rgb(207, 207, 207);
   border-top: thick solid #7014e8;
