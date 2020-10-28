@@ -116,6 +116,7 @@ header {
   width: 100%;
   border-bottom: 1px solid rgb(0, 0, 0, 0.1);
   background-color: white;
+  z-index: 99;
 }
 
 .head {
@@ -272,15 +273,19 @@ pre {
 .code {
   background: #ffffff;
   overflow: auto;
-  border: solid gray;
+  border: solid rgb(207, 207, 207);
   border-width: 0.01em 0.01em 0.01em 0.01em;
   padding: 0.2em 0.6em;
   height: auto;
   opacity: 0%;
-  transition: opacity 0.3s linear;
+  transition: opacity 0.1s linear;
   top: 0;
   grid-column: 1;
   grid-row: 1;
+}
+
+.code.active {
+  opacity: 100%;
 }
 
 .secContent.example {
@@ -302,14 +307,21 @@ pre {
 
 .tag a {
   position: relative;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 15px;
   padding-bottom: 0;
-  border: solid gray;
-  border-width: 0.01em;
-  border-bottom: solid 2px white;
-  z-index: 1;
+  border: hidden;
+  color: black;
+  text-decoration: none;
+  cursor: default;
 }
 .tag {
-  margin-bottom: -2px;
+  margin-bottom: -3px;
+}
+
+a.activeTag {
+  background-color: #ffffff;
+  border: solid 0.005em rgb(207, 207, 207);
+  border-top: thick solid #7014e8;
+  border-bottom: solid 2px white;
 }
