@@ -77,7 +77,13 @@ a.header {
   padding-bottom: 5px;
 }
 
-a.header:hover {
+@media (hover: hover) {
+  a.header:hover {
+    background-color: rgb(223, 223, 223, 0.2);
+  }
+}
+
+a.header:active {
   background-color: rgb(223, 223, 223, 0.2);
 }
 
